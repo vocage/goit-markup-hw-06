@@ -457,7 +457,6 @@
             </li>
           </ul>
         </div>
-
         <div class="subscribe">
           <p class="subscribe-title">Subscribe to the newsletter</p>
           <form class="subscribe-form">
@@ -484,8 +483,8 @@
     </footer>
 
     <!-- Modal window -->
-    <!-- TODO: insert class 'is-hidden' -->
-    <div class="backdrop" data-modal>
+
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="button-modal-close" data-modal-close>
           <svg width="18px" height="18px">
@@ -501,8 +500,8 @@
               <input
                 type="text"
                 class="modal-form-input"
-                pattern="[a-zA-Z]+"
                 name="client_name"
+                pattern="^(\w\w+)\s(\w+)$"
                 required
               />
               <svg class="modal-form-input-icon" width="18px" height="18px">
@@ -531,7 +530,13 @@
           <label class="modal-form-label">
             <span class="modal-form-field-desc">E-mail</span>
             <span class="modal-form-input-wrapper">
-              <input type="email" class="modal-form-input" name="client_email" required />
+              <input
+                type="email"
+                class="modal-form-input"
+                name="client_email"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                required
+              />
               <svg class="modal-form-input-icon" width="18px" height="18px">
                 <use href="./images/icons.svg#icon-form-email"></use>
               </svg>
@@ -551,17 +556,19 @@
             <input
               type="checkbox"
               name="client_terms"
-              class="modal-form-check"
+              class="modal-form-check visually-hidden"
               name="client-approved"
               required
             />
             <svg class="modal-form-checkbox" width="16px" height="15px">
               <use class="modal-form-checkbox-icon" href="./images/icons.svg#icon-form-check"></use>
             </svg>
-            I agree with the newsletter and accept the <a href="">Terms and Conditions</a>
+            I agree with the newsletter and accept the&nbsp;<a href="" class="modal-form-link"
+              >Terms and Conditions</a
+            >
           </label>
 
-          <button class="button send-btn" type="submit">Send</button>
+          <button class="send-btn" type="submit">Send</button>
         </form>
       </div>
     </div>
@@ -570,19 +577,3 @@
     <script src="./js/modal.js"></script>
   </body>
 </html>
-<!-- 
-<svg width="18px" height="18px">
-  <use href="./images/icons.svg#icon-form-name"></use>
-</svg>
-
-<svg width="18px" height="18px">
-  <use href="./images/icons.svg#icon-form-phone"></use>
-</svg>
-
-<svg width="18px" height="18px">
-  <use href="./images/icons.svg#icon-form-email"></use>
-</svg>
-
-<svg width="18px" height="18px">
-  <use href="./images/icons.svg#icon-form-check"></use>
-</svg> -->
