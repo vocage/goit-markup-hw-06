@@ -462,29 +462,28 @@
           <form class="subscribe-form">
             <label class="subscribe-label">
               <input
-                type="mail"
+                type="email"
                 placeholder="E-mail"
                 class="subscribe-input"
                 name="email"
                 required
               />
             </label>
-            <div class="subscribe-btn-wrapper">
-              <button class="button subscribe-btn" type="submit">
-                Subscribe
-                <svg class="subscribe-btn-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-subscribe"></use>
-                </svg>
-              </button>
-            </div>
+
+            <button class="button subscribe-btn" type="submit">
+              Subscribe
+              <svg class="subscribe-btn-icon" width="24px" height="24px">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
           </form>
         </div>
       </div>
     </footer>
 
-    <!-- Modal window -->
+    <!-- Modal window is-hidden -->
 
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
       <div class="modal">
         <button class="button-modal-close" data-modal-close>
           <svg width="18px" height="18px">
@@ -543,7 +542,7 @@
             </span>
           </label>
 
-          <label class="modal-form-label">
+          <label class="modal-form-label modal-form-label-comments">
             <span class="modal-form-field-desc">Comments</span>
             <textarea
               class="modal-form-comments"
@@ -555,7 +554,6 @@
           <label class="modal-form-terms">
             <input
               type="checkbox"
-              name="client_terms"
               class="modal-form-check visually-hidden"
               name="client-approved"
               required
@@ -563,11 +561,10 @@
             <svg class="modal-form-checkbox" width="16px" height="15px">
               <use class="modal-form-checkbox-icon" href="./images/icons.svg#icon-form-check"></use>
             </svg>
-            I agree with the newsletter and accept the&nbsp;<a href="" class="modal-form-link"
+            I agree with the newsletter and accept the<a href="" class="modal-form-link"
               >Terms and Conditions</a
             >
           </label>
-
           <button class="send-btn" type="submit">Send</button>
         </form>
       </div>
