@@ -1046,6 +1046,7 @@ img {
 .modal-form-terms {
   display: flex;
   align-items: center;
+  white-space: nowrap;
 
   margin-bottom: 30px;
 
